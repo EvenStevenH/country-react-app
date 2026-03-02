@@ -10,11 +10,9 @@ import CountryDetail from "./components/countries/CountryDetail";
 
 export default function App() {
 	const { countries, loading, error } = useFetch();
-
 	const [searchTerm, setSearchTerm] = useState("");
 	const [region, setRegion] = useState("");
 	const [selectedCountry, setSelectedCountry] = useState(null);
-
 	const filtered = useFilteredCountries(countries, searchTerm, region);
 
 	return (
