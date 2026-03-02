@@ -1,6 +1,6 @@
 import BorderCountries from "./BorderCountries";
 
-export function CountryDetail({ country, allCountries, onBack, onSelect }) {
+export default function CountryDetail({ country, allCountries, onBack, onSelect }) {
 	if (!country) return null;
 
 	const nativeName = Object.values(country.name.nativeName ?? {})[0]?.common || "N/A";
