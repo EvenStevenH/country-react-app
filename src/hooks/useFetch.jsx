@@ -1,10 +1,9 @@
 import { useEffect, useState, useRef } from "react";
 
-export function useCountries() {
+export function useFetch() {
 	const [countries, setCountries] = useState([]);
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState(null);
-	const isMountedRef = useRef(true); // track a changeable value > reference does not cause a re-render when updated
 
 	useEffect(() => {
 		async function fetchData() {
@@ -37,21 +36,16 @@ export function useCountries() {
 					};
 				});
 
-				if (isMountedRef.current) {
-					setCountries(dataCountries);
-					setLoading(false);
-				}
+				setCountries(countriesWithCodes); // use final data
+				setLoading(false);
 			} catch (error) {
-				if (isMountedRef.current) {
-					console.error("Failed to fetch countries:", error);
-					setError(error.message);
-					setLoading(false);
-				}
+				console.error("Failed to fetch countries:", error);
+				setError(error.message);
+				setLoading(false);
 			}
 		}
 
 		fetchData();
-		return () => (isMountedRef.current = false);
 	}, []);
 
 	return { countries, loading, error };

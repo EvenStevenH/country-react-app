@@ -23,7 +23,7 @@ export default function CountryDetail({ country, allCountries, onBack, onSelect 
 				id="backBtn"
 				onClick={onBack}
 			>
-				← Back
+				<span class="material-symbols-outlined">arrow_back_ios</span>Back
 			</button>
 
 			<div id="country-detail">
@@ -37,28 +37,28 @@ export default function CountryDetail({ country, allCountries, onBack, onSelect 
 
 					<ul>
 						<li>
-							<strong>Native Name:</strong> {nativeName}
+							<strong>Native Name</strong>: {nativeName}
 						</li>
 						<li>
-							<strong>Population:</strong> {country.population.toLocaleString()}
+							<strong>Population</strong>: {country.population.toLocaleString()}
 						</li>
 						<li>
-							<strong>Region:</strong> {country.region || "N/A"}
+							<strong>Region</strong>: {country.region || "N/A"}
 						</li>
 						<li>
-							<strong>Sub Region:</strong> {country.subregion || "N/A"}
+							<strong>Sub Region</strong>: {country.subregion || "N/A"}
 						</li>
 						<li>
-							<strong>Capital:</strong> {country.capital?.[0] || "N/A"}
+							<strong>Capital</strong>: {country.capital?.[0] || "N/A"}
 						</li>
 						<li>
-							<strong>Top Level Domain:</strong> {country.tld?.[0] || "N/A"}
+							<strong>Top Level Domain</strong>: {country.tld?.[0] || "N/A"}
 						</li>
 						<li>
-							<strong>Currencies:</strong> {currencies}
+							<strong>Currencies</strong>: {currencies}
 						</li>
 						<li>
-							<strong>Languages:</strong> {languages}
+							<strong>Languages</strong>: {languages}
 						</li>
 					</ul>
 

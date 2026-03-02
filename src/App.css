@@ -1,8 +1,4 @@
-#root {
-	max-width: 1280px;
-	margin: 0 auto;
-	padding: 2rem;
-	text-align: center;
+:root {
 	--bg: #fafafa;
 	--text: #111;
 	--accent: #ffffff;
@@ -62,7 +58,6 @@ nav {
 main {
 	max-width: 1440px;
 	margin: auto;
-	padding: 4em0;
 }
 
 #input-section,

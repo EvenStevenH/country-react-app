@@ -15,6 +15,7 @@ export default function Header() {
 					aria-checked={isDark}
 					onClick={toggleTheme}
 				>
+					<span className="material-symbols-outlined">{isDark ? "wb_sunny" : "bedtime"}</span>
 					{isDark ? "Light Mode" : "Dark Mode"}
 				</button>
 			</nav>
