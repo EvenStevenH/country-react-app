@@ -1,7 +1,7 @@
-import { useThemeContext } from "../../context/ThemeContext";
+import { useThemeContext } from "../context/ThemeContext";
 
 export default function Header() {
-	const { isDark, toggleTheme } = useThemeContext();
+	const { isDark, toggleTheme } = useThemeContext(); // uses global theme toggle
 
 	return (
 		<header>
